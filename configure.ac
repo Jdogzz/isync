@@ -3,7 +3,7 @@
 dnl SPDX-License-Identifier: GPL-2.0-or-later
 
 m4_syscmd([./version.sh])
-AC_INIT([isync], m4_esyscmd([tr -d '\n' < VERSION]))
+AC_INIT([isync], [m4_esyscmd_s([cat VERSION])])
 AC_CONFIG_HEADERS([autodefs.h])
 
 AC_CANONICAL_TARGET
